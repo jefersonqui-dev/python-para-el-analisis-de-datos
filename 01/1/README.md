@@ -5,7 +5,7 @@
 ### 1. Configuracion del Entorno de Desarrollo Profesional
 
 #### 1.1 Instalación de Python
-- **Descargar Python**: Visitar [python.org](https://python.org) y descargar la versión más reciente (3.11+)
+- **Descargar Python**: Visitar [python.org](https://python.org) y descargar la versión más reciente (3.13+)
 - **Instalación**: Ejecutar el instalador marcando "Add Python to PATH"
 - **Verificar**: Abrir terminal y ejecutar `python --version`
 
