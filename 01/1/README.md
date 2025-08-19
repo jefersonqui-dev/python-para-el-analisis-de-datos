@@ -4,6 +4,18 @@
 
 Python es un lenguaje de programación de alto nivel, interpretado y de propósito general que enfatiza la legibilidad del código. Su sintaxis permite a los programadores expresar conceptos en menos líneas de código en comparación con otros lenguajes como C++ o Java.
 
+```mermaid
+graph TD
+    A["🐍 Python"] 
+
+    A --> B["🔐 Seguridad Informática <br/> Programar scripts para detectar vulnerabilidades"]
+    A --> C["🌐 Desarrollo Web <br/> Frameworks: Django, Flask, Pyramid, etc."]
+    A --> D["🧪 Testing y QA <br/> Automatización de tests de código y funcionalidades"]
+    A --> E["📊 Big Data y Data Science <br/> ETL, análisis y almacenamiento de grandes datos"]
+    A --> F["🎮 Videojuegos <br/> Frameworks: PyGame, PyOpenGL, Blender, etc."]
+    A --> G["🤖 Machine Learning <br/> Librerías: Scikit-learn, SciPy, TensorFlow, etc."]
+```
+
 ### Características Principales de Python
 
 - **Legibilidad**: Python tiene una sintaxis clara y sencilla que hace que el código sea fácil de leer y entender, lo que reduce el costo de mantenimiento.
