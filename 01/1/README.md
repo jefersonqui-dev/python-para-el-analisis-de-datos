@@ -493,7 +493,109 @@ Para mejorar tu experiencia de desarrollo, considera instalar Cursor y algunas e
 
 Estas herramientas y configuraciones te ayudarán a crear un entorno de desarrollo más productivo y agradable.
 
+### ¿Qué es un Paquete?
 
+Una de las principales ventajas de utilizar bibliotecas externas es acelerar el tiempo de desarrollo de tu programa. Puedes obtener una biblioteca de este tipo en Internet. Pero al buscar e instalar estas bibliotecas a través de un entorno virtual, te aseguras de instalar estas bibliotecas solo para el entorno virtual y no globalmente para toda la máquina.
+
+### Instalar un Paquete
+
+Instalar un paquete mediante `pip`. El comando `pip` utiliza el Python Package Index, o PyPi para abreviar, para saber dónde obtener los paquetes. Puedes visitar el sitio web de [PyPi](https://pypi.org/) para conocer qué paquetes están disponibles.
+
+Para instalar un paquete, ejecuta el siguiente comando:
+
+```bash
+pip install python-dateutil
+```
+
+*Dato curioso: Si estás desde un notebook se ejecuta así: `!pip install python-dateutil`* Con signo de admiración al inicio. Sin embargo, no estamos trabajando con notebooks ahorita, estamos ejecutando todo por terminal (consola, bash, cli, cmd, como sea que le digas).
+
+Si ejecutas el comando anterior, descargará e instalará `dateutil`, un paquete para analizar el formato de archivo .yml. Después de instalar el paquete, puedes verlo en la lista si expandes el directorio lib en env, así:
+
+```
+/env
+  /lib
+    /dateutil
+```
+
+Para ver qué paquetes están ahora instalados en tu entorno virtual, puedes ejecutar `pip freeze`. Este comando produce una lista de paquetes instalados en el terminal:
+
+*Recuerda: Si deseas instalar un paquete desde un notebook se ejecuta con signo de admiración al inicio. `!pip freeze`* Sin embargo, no estamos trabajando con notebooks ahorita, estamos ejecutando todo por terminal.
+
+```
+# Mensaje de salida en consola
+python-dateutil==2.8.2
+six==1.16.0
+```
+
+Contiene algo más que sólo `pipdate` porque en sí misma se basan otras bibliotecas.
+
+Para asegurarte de que estos paquetes solo existen en tu entorno virtual, intenta salir de ese entorno llamando al comando `deactivate`:
+
+```bash
+deactivate
+```
+
+Observa cómo cambia el mensaje de la terminal. Ya no está precedido por `(env)` y ha regresado a su estado anterior:
+
+```
+# Bash | Consola
+path/to/project
+```
+
+Si ejecutas el comando `pip freeze`, verás una lista mucho más larga de dependencias. Esta lista indica que verás todos los paquetes instalados en tu máquina en lugar de solo lo que está instalado en tu entorno virtual.
+
+### Más Formas de Instalar un Paquete
+
+También puedes utilizar los siguientes comandos para instalar un paquete:
+
+- Teniendo un conjunto de archivos en tu máquina e instalándolos desde esa fuente:
+  ```bash
+  cd <to where the package is on your machine>
+  python3 -m pip install .
+  ```
+- Instalar desde un repositorio de GitHub que nos proporciona el control de versiones:
+  ```bash
+git+https://github.com/your-repo.git
+```
+- Instalar desde un archivo comprimido:
+  ```bash
+python3 -m pip install package.tar.gz
+```
+
+### Usar un Paquete Instalado
+
+Ahora tienes un paquete instalado. ¿Cómo se usa en el código?
+
+Asegúrate de tener un directorio para tus archivos. Te sugerimos que llames al directorio (folder) `src` y agregues un archivo Python llamado `app.py`. Ahora agrega un poco de código para llamar al comando `pipdate`:
+
+```python
+from datetime import *
+from dateutil.relativedelta import *
+now = datetime.now()
+print(now)
+
+now = now + relativedelta(months=1, weeks=1, hour=10)
+
+print(now)
+```
+
+### Trabajar con paquetes
+La mayoría de los programas que escribas se basarán en código escrito por otros. Este código a menudo viene en forma de paquetes, que son módulos externos o bibliotecas que se incluyen en el proyecto. Al igual que con cualquier proyecto que requiera un conjunto de recursos, es importante considerar cómo te asegurarás de que los recursos adecuados estén disponibles para tu programa.
+
+Un buen comienzo es aprender a administrar tu programa. Una forma de hacerlo es pensar en el programa como un proyecto. Python aborda esto mediante el uso de algo llamado entornos virtuales.
+
+#### ¿Qué es un entorno virtual?
+Tienes una máquina de desarrollo. En esa máquina, es posible que tengas una versión de Python instalada o una versión de una biblioteca que quieras usar. ¿Qué sucede cuando mueves tu programa a una máquina que tiene una versión diferente de Python instalada o diferentes versiones de las bibliotecas de las que depende?
+
+Una cosa que no deseas hacer es asumir que tu programa funcionará y que puede instalar la última versión de las bibliotecas de las que depende. Si haces eso, podrías terminar destruyendo la capacidad de los otros programas para funcionar en la máquina de destino. La solución es encontrar una manera de que tu aplicación funcione de forma aislada.
+
+La solución de Python para estos problemas es un entorno virtual. Un entorno virtual es una copia autónoma de todo lo necesario para ejecutar el programa. Esto incluye el intérprete de Python y cualquier biblioteca que su programa necesite. Mediante el uso de un entorno virtual, puedes asegurarte de que tu programa tendrá acceso a las versiones y recursos correctos para ejecutarse correctamente.
+
+El flujo de trabajo básico se ve así:
+
+* Crear un entorno virtual que no afecte al resto de la máquina.
+* Ingresar al entorno virtual, donde especifique la versión de Python y las bibliotecas que necesita.
+* Desarrolla tu programa.
 
 ### Creación de un Proyecto de Análisis de Datos en Python
 
