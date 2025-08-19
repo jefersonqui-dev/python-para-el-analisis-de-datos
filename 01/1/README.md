@@ -1,4 +1,4 @@
-## Capítulo 1 - Introducción a Python
+# Clase 01  - Introducción a Python
 
 ## ¿Qué es Python?
 
@@ -24,7 +24,9 @@ graph TD
 
 - **Amplia Biblioteca Estándar**: Python viene con una extensa colección de módulos y paquetes que permiten a los desarrolladores realizar diversas tareas sin necesidad de escribir código desde cero.
 
-- **Interpretado Dinámico**: Python ejecuta el código línea por línea, lo que facilita la depuración y permite un desarrollo más rápido. Además, su tipado dinámico permite mayor flexibilidad en la programación.
+- **Comunidad y Soporte**: Python cuenta con una gran comunidad de desarrolladores que contribuyen a su crecimiento y mejora continua. Hay abundante documentación y recursos disponibles para aprender y resolver problemas.
+
+- **Tipado Dinámico**: Python ejecuta el código línea por línea, lo que facilita la depuración y permite un desarrollo más rápido. Además, su tipado dinámico permite mayor flexibilidad en la programación.
 
 #### Ejemplo de Tipado Dinámico
 
@@ -42,21 +44,71 @@ print(type(a))  # <class 'str'>
 
 En este ejemplo, la variable `a` cambia de un entero a una cadena sin necesidad de declarar su tipo, demostrando la flexibilidad del tipado dinámico en Python.
 
-### Características Principales
+### Comparación con Java y C++
 
-- **Legibilidad**: Python tiene una sintaxis clara y sencilla que hace que el código sea fácil de leer y entender, lo que reduce el costo de mantenimiento.
+Python se diferencia de lenguajes como Java y C++ en varios aspectos clave, especialmente en su tipado dinámico y sintaxis.
 
-- **Versatilidad**: Es utilizado en una amplia variedad de aplicaciones, desde desarrollo web y análisis de datos hasta inteligencia artificial y automatización de tareas.
+#### Tipado Dinámico vs. Tipado Estático
 
-- **Amplia Biblioteca Estándar**: Python viene con una extensa colección de módulos y paquetes que permiten a los desarrolladores realizar diversas tareas sin necesidad de escribir código desde cero.
+- **Python (Tipado Dinámico)**:
+  - No requiere declarar el tipo de una variable al asignarla.
+  - Permite cambiar el tipo de una variable en tiempo de ejecución.
+  
+  ```python
+  a = 10  # Entero
+  a = 'Texto'  # Ahora es una cadena
+  ```
 
-- **Interpretado Dinámico**: Python ejecuta el código línea por línea, lo que facilita la depuración y permite un desarrollo más rápido. Además, su tipado dinámico permite mayor flexibilidad en la programación.
+- **Java y C++ (Tipado Estático)**:
+  - Requieren declarar el tipo de una variable al definirla.
+  - El tipo de una variable no puede cambiar una vez definido.
+  
+  ```java
+  // Java
+  int a = 10;
+  // a = "Texto";  // Error: incompatible types
+  
+  // C++
+  int a = 10;
+  // a = "Texto";  // Error: cannot convert
+  ```
 
-- **Comunidad y Soporte**: Python cuenta con una gran comunidad de desarrolladores que contribuyen a su crecimiento y mejora continua. Hay abundante documentación y recursos disponibles para aprender y resolver problemas.
+#### Sintaxis
 
-# 01 - Fundamentos modernos para el analisis de datos con python
+- **Python**:
+  - Sintaxis concisa y legible.
+  - Usa indentación para definir bloques de código.
+  
+  ```python
+  def suma(a, b):
+      return a + b
+  ```
 
-## Clase 1 - Configuracion Profesional del Entorno y Primer Proyecto
+- **Java**:
+  - Sintaxis más verbosa.
+  - Usa llaves `{}` para definir bloques de código.
+  
+  ```java
+  public int suma(int a, int b) {
+      return a + b;
+  }
+  ```
+
+- **C++**:
+  - Similar a Java en términos de verbosidad y uso de llaves.
+  
+  ```cpp
+  int suma(int a, int b) {
+      return a + b;
+  }
+  ```
+
+Estas diferencias hacen que Python sea más flexible y fácil de leer, especialmente para principiantes, mientras que Java y C++ ofrecen un control más estricto sobre los tipos de datos y la estructura del código.
+
+
+
+
+# 01 - Configuracion Profesional del Entorno 
 
 ### 1. Configuracion del Entorno de Desarrollo Profesional
 
@@ -441,66 +493,7 @@ Para mejorar tu experiencia de desarrollo, considera instalar Cursor y algunas e
 
 Estas herramientas y configuraciones te ayudarán a crear un entorno de desarrollo más productivo y agradable.
 
-### Comparación con Java y C++
 
-Python se diferencia de lenguajes como Java y C++ en varios aspectos clave, especialmente en su tipado dinámico y sintaxis.
-
-#### Tipado Dinámico vs. Tipado Estático
-
-- **Python (Tipado Dinámico)**:
-  - No requiere declarar el tipo de una variable al asignarla.
-  - Permite cambiar el tipo de una variable en tiempo de ejecución.
-  
-  ```python
-  a = 10  # Entero
-  a = 'Texto'  # Ahora es una cadena
-  ```
-
-- **Java y C++ (Tipado Estático)**:
-  - Requieren declarar el tipo de una variable al definirla.
-  - El tipo de una variable no puede cambiar una vez definido.
-  
-  ```java
-  // Java
-  int a = 10;
-  // a = "Texto";  // Error: incompatible types
-  
-  // C++
-  int a = 10;
-  // a = "Texto";  // Error: cannot convert
-  ```
-
-#### Sintaxis
-
-- **Python**:
-  - Sintaxis concisa y legible.
-  - Usa indentación para definir bloques de código.
-  
-  ```python
-  def suma(a, b):
-      return a + b
-  ```
-
-- **Java**:
-  - Sintaxis más verbosa.
-  - Usa llaves `{}` para definir bloques de código.
-  
-  ```java
-  public int suma(int a, int b) {
-      return a + b;
-  }
-  ```
-
-- **C++**:
-  - Similar a Java en términos de verbosidad y uso de llaves.
-  
-  ```cpp
-  int suma(int a, int b) {
-      return a + b;
-  }
-  ```
-
-Estas diferencias hacen que Python sea más flexible y fácil de leer, especialmente para principiantes, mientras que Java y C++ ofrecen un control más estricto sobre los tipos de datos y la estructura del código.
 
 ### Creación de un Proyecto de Análisis de Datos en Python
 
