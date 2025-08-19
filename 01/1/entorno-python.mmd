@@ -1,0 +1,12 @@
+graph TD
+  A["Instalar Python 3.13+ (python.org)"] --> B["Verificar: python --version"]
+  B --> C["Crear entorno virtual: python -m venv mi_proyecto"]
+  C --> D{"Activar entorno"}
+  D --> D1["Windows: mi_proyecto\\Scripts\\activate"]
+  D --> D2["macOS/Linux: source mi_proyecto/bin/activate"]
+  D1 --> E["Actualizar pip: python -m pip install --upgrade pip"]
+  D2 --> E
+  E --> F["Instalar base: jupyter, pandas, numpy"]
+  F --> F2["Visualización: matplotlib, seaborn"]
+  F2 --> G["Verificar con test_config.py"]
+  G --> H["✅ Entorno listo"]
