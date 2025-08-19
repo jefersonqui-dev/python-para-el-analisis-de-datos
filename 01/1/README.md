@@ -383,7 +383,81 @@ Anaconda es una distribución de Python que simplifica la gestión de entornos v
   - **SciPy**: Para tareas matemáticas avanzadas como optimización e integración.
   - **Scikit-learn**: Para aprendizaje automático y modelado predictivo.
 
+
+
 - **Gestión de Entornos**: Anaconda facilita la creación y gestión de entornos virtuales, permitiéndote aislar proyectos y sus dependencias.
+
+#### Uso de Anaconda para Análisis de Datos
+
+Anaconda es una distribución de Python que simplifica la gestión de entornos virtuales y la instalación de bibliotecas para análisis de datos. Aquí te explicamos por qué es una opción popular:
+
+- **Bibliotecas Preinstaladas**: Anaconda viene con muchas bibliotecas populares para análisis de datos ya instaladas, lo que te ahorra tiempo y esfuerzo.
+
+- **Gestión de Entornos**: Anaconda facilita la creación y gestión de entornos virtuales, permitiéndote aislar proyectos y sus dependencias.
+
+```mermaid
+graph TD
+    A["Descargar Anaconda (anaconda.com)"] --> B["Instalar Anaconda (ejecutar instalador)"]
+    B --> C["Verificar instalación: anaconda --version"]
+    C --> D["Abrir Anaconda Navigator / Prompt"]
+
+    D --> E{"Crear entorno de trabajo"}
+    E --> E1["Con Navigator: clic en 'Environments' → New"]
+    E --> E2["Con Prompt: conda create -n mi_entorno python=3.10"]
+
+    E1 --> F["Activar entorno"]
+    E2 --> F["Activar entorno"]
+
+    F --> F1["Navigator: seleccionar entorno y abrir terminal"]
+    F --> F2["Prompt: conda activate mi_entorno"]
+
+    F --> G{"Instalar librerías necesarias"}
+    G --> G1["Ejemplo: conda install numpy pandas matplotlib"]
+    G --> G2["O con pip install paquete"]
+
+    G --> H["Configurar IDE (VSCode, Jupyter, PyCharm)"]
+    H --> I["Seleccionar kernel/interprete del entorno creado"]
+
+    I --> J["¡Entorno listo para trabajar! 🎉"]
+```
+
+Esta estructura te ayudará a mantener tu proyecto organizado y facilitará la colaboración con otros desarrolladores.
+
+### Paquetes Más Usados en Análisis de Datos
+
+Aquí tienes una lista de los paquetes más utilizados en análisis de datos junto con los enlaces a sus páginas oficiales:
+
+1. **Pandas**: Herramienta poderosa para la manipulación y análisis de datos.
+   - Página oficial: [pandas.pydata.org](https://pandas.pydata.org/)
+
+2. **NumPy**: Biblioteca fundamental para la computación científica en Python.
+   - Página oficial: [numpy.org](https://numpy.org/)
+
+3. **Matplotlib**: Biblioteca para crear visualizaciones estáticas, animadas e interactivas.
+   - Página oficial: [matplotlib.org](https://matplotlib.org/)
+
+4. **Seaborn**: Biblioteca para visualización estadística basada en Matplotlib.
+   - Página oficial: [seaborn.pydata.org](https://seaborn.pydata.org/)
+
+5. **SciPy**: Biblioteca que proporciona algoritmos y herramientas matemáticas avanzadas.
+   - Página oficial: [scipy.org](https://scipy.org/)
+
+6. **Scikit-learn**: Biblioteca para aprendizaje automático y modelado predictivo.
+   - Página oficial: [scikit-learn.org](https://scikit-learn.org/)
+
+7. **TensorFlow**: Plataforma de código abierto para el aprendizaje automático.
+   - Página oficial: [tensorflow.org](https://www.tensorflow.org/)
+
+8. **PyTorch**: Biblioteca de aprendizaje automático que acelera el camino del prototipo al producto.
+   - Página oficial: [pytorch.org](https://pytorch.org/)
+
+9. **Statsmodels**: Biblioteca para la estimación de modelos estadísticos y pruebas.
+   - Página oficial: [statsmodels.org](https://www.statsmodels.org/)
+
+10. **Plotly**: Biblioteca para crear gráficos interactivos y visualizaciones.
+    - Página oficial: [plotly.com](https://plotly.com/python/)
+
+Estos paquetes son fundamentales para el análisis de datos y el aprendizaje automático en Python.
 
 #### Comandos Básicos de Anaconda
 
@@ -692,44 +766,9 @@ setup.cfg
 ├── modeling/
 │   ├── __init__.py
 │   ├── predict.py
-│   └── train.py
+│   └── train.
 └── plots.py
 ```
 
 Esta estructura es generada automáticamente por Cookiecutter y organiza el proyecto de manera eficiente para el análisis de datos.
 
-#### Uso de Anaconda para Análisis de Datos
-
-Anaconda es una distribución de Python que simplifica la gestión de entornos virtuales y la instalación de bibliotecas para análisis de datos. Aquí te explicamos por qué es una opción popular:
-
-- **Bibliotecas Preinstaladas**: Anaconda viene con muchas bibliotecas populares para análisis de datos ya instaladas, lo que te ahorra tiempo y esfuerzo.
-
-- **Gestión de Entornos**: Anaconda facilita la creación y gestión de entornos virtuales, permitiéndote aislar proyectos y sus dependencias.
-
-```mermaid
-graph TD
-    A["Descargar Anaconda (anaconda.com)"] --> B["Instalar Anaconda (ejecutar instalador)"]
-    B --> C["Verificar instalación: anaconda --version"]
-    C --> D["Abrir Anaconda Navigator / Prompt"]
-
-    D --> E{"Crear entorno de trabajo"}
-    E --> E1["Con Navigator: clic en 'Environments' → New"]
-    E --> E2["Con Prompt: conda create -n mi_entorno python=3.10"]
-
-    E1 --> F["Activar entorno"]
-    E2 --> F["Activar entorno"]
-
-    F --> F1["Navigator: seleccionar entorno y abrir terminal"]
-    F --> F2["Prompt: conda activate mi_entorno"]
-
-    F --> G{"Instalar librerías necesarias"}
-    G --> G1["Ejemplo: conda install numpy pandas matplotlib"]
-    G --> G2["O con pip install paquete"]
-
-    G --> H["Configurar IDE (VSCode, Jupyter, PyCharm)"]
-    H --> I["Seleccionar kernel/interprete del entorno creado"]
-
-    I --> J["¡Entorno listo para trabajar! 🎉"]
-```
-
-Esta estructura te ayudará a mantener tu proyecto organizado y facilitará la colaboración con otros desarrolladores.
