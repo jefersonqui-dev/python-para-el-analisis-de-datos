@@ -1,0 +1,23 @@
+graph TD
+    A["Descargar Anaconda (anaconda.com)"] --> B["Instalar Anaconda (ejecutar instalador)"]
+    B --> C["Verificar instalación: anaconda --version"]
+    C --> D["Abrir Anaconda Navigator / Prompt"]
+
+    D --> E{"Crear entorno de trabajo"}
+    E --> E1["Con Navigator: clic en 'Environments' → New"]
+    E --> E2["Con Prompt: conda create -n mi_entorno python=3.10"]
+
+    E1 --> F["Activar entorno"]
+    E2 --> F["Activar entorno"]
+
+    F --> F1["Navigator: seleccionar entorno y abrir terminal"]
+    F --> F2["Prompt: conda activate mi_entorno"]
+
+    F --> G{"Instalar librerías necesarias"}
+    G --> G1["Ejemplo: conda install numpy pandas matplotlib"]
+    G --> G2["O con pip install paquete"]
+
+    G --> H["Configurar IDE (VSCode, Jupyter, PyCharm)"]
+    H --> I["Seleccionar kernel/interprete del entorno creado"]
+
+    I --> J["¡Entorno listo para trabajar! 🎉"]
