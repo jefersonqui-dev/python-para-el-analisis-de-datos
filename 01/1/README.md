@@ -1,3 +1,4 @@
+
 # Clase 01  - Introducción a Python
 
 ## ¿Qué es Python?
@@ -27,6 +28,23 @@ graph TD
 - **Comunidad y Soporte**: Python cuenta con una gran comunidad de desarrolladores que contribuyen a su crecimiento y mejora continua. Hay abundante documentación y recursos disponibles para aprender y resolver problemas.
 
 - **Tipado Dinámico**: Python ejecuta el código línea por línea, lo que facilita la depuración y permite un desarrollo más rápido. Además, su tipado dinámico permite mayor flexibilidad en la programación.
+
+### Intérprete de Python
+
+El intérprete de Python es un componente esencial para ejecutar programas escritos en Python. Actúa como un traductor que convierte el código Python en instrucciones que la máquina puede entender y ejecutar. Cuando descargas Python desde [python.org](https://python.org), estás obteniendo el intérprete junto con otras herramientas útiles para el desarrollo en Python.
+
+## ¿Por qué es Necesario el Intérprete de Python?
+
+- **Ejecución de Código**: El intérprete permite ejecutar scripts de Python directamente, sin necesidad de compilación previa, lo que facilita el desarrollo y la prueba de código.
+
+- **Portabilidad**: Python es un lenguaje multiplataforma, y su intérprete está disponible para diferentes sistemas operativos, lo que permite ejecutar el mismo código en Windows, macOS y Linux sin modificaciones.
+
+- **Interactividad**: El intérprete de Python ofrece un modo interactivo que permite a los desarrolladores probar fragmentos de código rápidamente, lo que es útil para la depuración y el aprendizaje.
+
+- **Gestión de Paquetes**: A través del intérprete, se pueden gestionar paquetes y bibliotecas, lo que facilita la instalación y actualización de dependencias necesarias para los proyectos.
+
+El intérprete de Python es, por lo tanto, una herramienta fundamental para cualquier desarrollador que trabaje con este lenguaje, proporcionando flexibilidad y eficiencia en el desarrollo de software.
+
 
 #### Ejemplo de Tipado Dinámico
 
@@ -496,88 +514,6 @@ Estas herramientas y configuraciones te ayudarán a crear un entorno de desarrol
 ### ¿Qué es un Paquete?
 
 Una de las principales ventajas de utilizar bibliotecas externas es acelerar el tiempo de desarrollo de tu programa. Puedes obtener una biblioteca de este tipo en Internet. Pero al buscar e instalar estas bibliotecas a través de un entorno virtual, te aseguras de instalar estas bibliotecas solo para el entorno virtual y no globalmente para toda la máquina.
-
-### Instalar un Paquete
-
-Instalar un paquete mediante `pip`. El comando `pip` utiliza el Python Package Index, o PyPi para abreviar, para saber dónde obtener los paquetes. Puedes visitar el sitio web de [PyPi](https://pypi.org/) para conocer qué paquetes están disponibles.
-
-Para instalar un paquete, ejecuta el siguiente comando:
-
-```bash
-pip install python-dateutil
-```
-
-*Dato curioso: Si estás desde un notebook se ejecuta así: `!pip install python-dateutil`* Con signo de admiración al inicio. Sin embargo, no estamos trabajando con notebooks ahorita, estamos ejecutando todo por terminal (consola, bash, cli, cmd, como sea que le digas).
-
-Si ejecutas el comando anterior, descargará e instalará `dateutil`, un paquete para analizar el formato de archivo .yml. Después de instalar el paquete, puedes verlo en la lista si expandes el directorio lib en env, así:
-
-```
-/env
-  /lib
-    /dateutil
-```
-
-Para ver qué paquetes están ahora instalados en tu entorno virtual, puedes ejecutar `pip freeze`. Este comando produce una lista de paquetes instalados en el terminal:
-
-*Recuerda: Si deseas instalar un paquete desde un notebook se ejecuta con signo de admiración al inicio. `!pip freeze`* Sin embargo, no estamos trabajando con notebooks ahorita, estamos ejecutando todo por terminal.
-
-```
-# Mensaje de salida en consola
-python-dateutil==2.8.2
-six==1.16.0
-```
-
-Contiene algo más que sólo `pipdate` porque en sí misma se basan otras bibliotecas.
-
-Para asegurarte de que estos paquetes solo existen en tu entorno virtual, intenta salir de ese entorno llamando al comando `deactivate`:
-
-```bash
-deactivate
-```
-
-Observa cómo cambia el mensaje de la terminal. Ya no está precedido por `(env)` y ha regresado a su estado anterior:
-
-```
-# Bash | Consola
-path/to/project
-```
-
-Si ejecutas el comando `pip freeze`, verás una lista mucho más larga de dependencias. Esta lista indica que verás todos los paquetes instalados en tu máquina en lugar de solo lo que está instalado en tu entorno virtual.
-
-### Más Formas de Instalar un Paquete
-
-También puedes utilizar los siguientes comandos para instalar un paquete:
-
-- Teniendo un conjunto de archivos en tu máquina e instalándolos desde esa fuente:
-  ```bash
-  cd <to where the package is on your machine>
-  python3 -m pip install .
-  ```
-- Instalar desde un repositorio de GitHub que nos proporciona el control de versiones:
-  ```bash
-git+https://github.com/your-repo.git
-```
-- Instalar desde un archivo comprimido:
-  ```bash
-python3 -m pip install package.tar.gz
-```
-
-### Usar un Paquete Instalado
-
-Ahora tienes un paquete instalado. ¿Cómo se usa en el código?
-
-Asegúrate de tener un directorio para tus archivos. Te sugerimos que llames al directorio (folder) `src` y agregues un archivo Python llamado `app.py`. Ahora agrega un poco de código para llamar al comando `pipdate`:
-
-```python
-from datetime import *
-from dateutil.relativedelta import *
-now = datetime.now()
-print(now)
-
-now = now + relativedelta(months=1, weeks=1, hour=10)
-
-print(now)
-```
 
 ### Trabajar con paquetes
 La mayoría de los programas que escribas se basarán en código escrito por otros. Este código a menudo viene en forma de paquetes, que son módulos externos o bibliotecas que se incluyen en el proyecto. Al igual que con cualquier proyecto que requiera un conjunto de recursos, es importante considerar cómo te asegurarás de que los recursos adecuados estén disponibles para tu programa.
