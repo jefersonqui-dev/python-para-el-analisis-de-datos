@@ -567,8 +567,7 @@ Para mejorar tu experiencia de desarrollo, considera instalar Cursor y algunas e
 
 #### Instalación de Cursor
 
-1. Visita el sitio oficial de Cursor y descarga el instalador adecuado para tu sistema operativo.
-2. Sigue las instrucciones del instalador para completar la instalación.
+Cursor es una herramienta útil para mejorar tu flujo de trabajo en Python. Puedes descargar e instalar Cursor desde su [página oficial](https://cursor.dev/). Sigue las instrucciones proporcionadas para completar la instalación y comenzar a usarlo en tus proyectos.
 
 #### Extensiones Recomendadas
 
@@ -772,3 +771,7 @@ setup.cfg
 
 Esta estructura es generada automáticamente por Cookiecutter y organiza el proyecto de manera eficiente para el análisis de datos.
 
+
+### Instalación de Cursor
+
+Cursor es una herramienta útil para mejorar tu flujo de trabajo en Python. Puedes descargar e instalar Cursor desde su [página oficial](https://cursor.dev/). Sigue las instrucciones proporcionadas para completar la instalación y comenzar a usarlo en tus proyectos.
